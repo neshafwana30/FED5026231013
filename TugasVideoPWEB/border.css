@@ -1,0 +1,157 @@
+p.none {
+    border-style: none;
+}
+
+p.hidden {
+    border-style: hidden;
+}
+
+p.dot {
+    border-style: dotted;
+    border-width: 10px;
+}
+
+p.dash {
+    border-style: dashed;
+    text-align: center;
+    border-radius: 40px;
+}
+
+p.solid {
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgb(219, 135, 202);
+    border-radius: 30px;
+    padding: 10px;
+}
+
+p.double {
+    border-style: double;
+}
+
+p.groove {
+    border-style: groove;
+    border-width: 5px;
+    border-color: plum;
+}
+
+p.ridge {
+    border-style: ridge;
+    border-width: 5px;
+    border-color: plum;
+}
+
+p.inset {
+    border: 5px inset plum;
+}
+
+p.outset {
+    border-style: outset;
+}
+
+p.mixed {
+    border-style: solid double dotted groove;
+    border-width: 2px 4px 6px 8px;
+    border-color: powderblue palevioletred greenyellow plum;
+}
+
+p.borderSide {
+    border-top-style: dashed;
+    border-bottom-style: dotted;
+    border-top-width: 3px;
+    border-bottom-width: 6px ;
+    border-top-color: aquamarine;
+}
+
+p.leftside {
+    border-left-style: solid;
+    border-left-width: 7px;
+    border-left-color: salmon;
+}
+
+p.shortHandBorder {
+    border-left: 7px solid salmon;
+    border-top-left-radius: 6px;
+}
+
+
+@keyframes animation1{
+    from {background-color: powderblue;}
+    to {background-color: palevioletred;}
+}
+
+
+@keyframes animation2 {
+    0% {background-color: powderblue; left: 0px; top: 0px;}
+    25% {background-color: peachpuff; left: 200px; top: 0px;}
+    50% {background-color: palevioletred; left: 200px; top: 200px;}
+    75% {background-color: khaki; left: 0px; top: 200px;}
+    100% {background-color: salmon; left: 0px; top: 0px;}
+}
+
+div.an1{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: powderblue;
+    animation-name: animation2;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+div.an2{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: powderblue;
+    animation-name: animation2;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    /* animation-iteration-count: 5; */
+}
+
+div.an3{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: powderblue;
+    animation-name: animation2;
+    animation-delay: 2s;     
+    animation-duration: 5s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation3 {
+    0% {background-color: powderblue; left: 0px; top: 0px;}
+    25% {background-color: peachpuff; left: 200px; top: 0px;}
+    50% {background-color: palevioletred; left: 200px; top: 200px;}
+    75% {background-color: khaki; left: 0px; top: 200px;}
+    100% {background-color: salmon; left: 0px; top: 0px;}
+}
+
+div {
+    width: 100px;
+    height: 50px;
+    background-color: palevioletred;
+    font-weight: bold;
+    position: relative;
+    animation: mymove 5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+#div1 {animation-timing-function: linear;}
+#div2 {animation-timing-function: ease;}
+#div3 {animation-timing-function: ease-in;}
+#div4 {animation-timing-function: ease-out;}
+#div5 {animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+    from {left: 0px;}
+    to {left: 350px;}
+}
