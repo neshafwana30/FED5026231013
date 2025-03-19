@@ -1,0 +1,181 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #135589;
+    color: white;
+    padding-top: 20px;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .logo .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.sidebar .logo .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the right */
+    margin-top: 40px; /* Add space above the group */
+}
+
+.sidebar .logo .profile-text {
+    color: white;
+    font-size: 12px;
+    font-weight: bold; /* Make "Admin" bold */
+}
+
+.sidebar .logo .profile-email {
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #add0ed9e;
+    color: white; /* Ensure text is visible */
+    border-radius: 12px; /* Add rounded corners */
+    margin: 5px 10px; /* Add space around the active item */
+    padding: 8px 15px; /* Adjust padding for consistent spacing */
+    transition: background 0.3s, margin 0.3s; /* Smooth transition */
+}
+
+.sidebar .active {
+    background: #0d395b98;
+    color: white; /* Ensure text is visible */
+    border-radius: 12px; /* Add rounded corners */
+    margin: 5px 10px; /* Add space around the active item */
+    padding: 8px 15px; /* Adjust padding for consistent spacing */
+    transition: background 0.3s, margin 0.3s; /* Smooth transition */
+}
+
+/* Logout Link Styles */
+.sidebar a.text-danger {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #dc3545; /* Ensure the text is visible */
+}
+
+/* Toggle Button Styles */
+.toggle-checkbox {
+    display: none;
+}
+
+.content h2 {
+    font-family: 'Arial', sans-serif; /* Change to your desired font */
+    font-weight: 700; /* Set the font weight for the heading */
+    color: #333; /* Optional: Set a color for the heading */
+    margin-top: 20px;
+}
+
+.content p {
+    font-family: 'Arial', sans-serif; /* Change to your desired font */
+    font-weight: 400; /* Set the font weight for the paragraph */
+    color: #666; /* Optional: Set a color for the paragraph */
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #748ca5;
+    transition-delay: 2s;
+}
+
+.close-btn {
+    left: 200px;
+    top: 3px;
+    color: #748ca5;
+}
+
+.open-btn {
+    left: 4px;
+    top: 3px;
+    display: block;
+    background-color: #0d47a1; /* Apply the background color */
+    color: white; /* Ensure the icon or text is visible against the background */
+    border: none; /* Remove any default border */
+    padding: 5px; /* Add some padding for better appearance */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: left 0.3s, opacity 0.3s; /* Add transition for opacity */
+    opacity: 0; /* Start with the icon hidden */
+    transition-delay: 0.3s; /* Delay the appearance */
+}
+/* Content Styles */
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+/* Toggle Sidebar */
+.toggle-checkbox:checked ~ .sidebar {
+    width: 0;
+}
+
+.toggle-checkbox:checked ~ .sidebar .close-btn {
+    display: none;
+}
+
+.toggle-checkbox:checked ~ .open-btn {
+    display: block;
+    opacity: 1; /* Make the icon visible */
+    transition-delay: 0s; /* Remove delay when showing */
+}
+
+.toggle-checkbox:not(:checked) ~ .open-btn {
+    display: none;
+    opacity: 0; /* Keep the icon hidden */
+}
+
+.toggle-checkbox:checked ~ .content {
+    margin-left: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+    }
+    .close-btn {
+        left: 0;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
