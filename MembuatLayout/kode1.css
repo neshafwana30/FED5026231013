@@ -1,181 +1,305 @@
-/* Sidebar Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar, .content, .profile-info, .logout-btn {
+  font-family: inherit; /* Inherit from body */
+}
+
+.content h2, .content p {
+  font-family: inherit; /* Inherit from body */
+}
+
+.content h2 {
+    font-family: inherit;
+    font-weight: 650;
+    letter-spacing: -0.5px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.content h3
+{
+    font-family: inherit;
+    font-weight: 790;
+    font-size: 40px;
+    letter-spacing: -1px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: #135589;
-    color: white;
-    padding-top: 20px;
-    transition: width 0.3s;
-    overflow: hidden;
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #135589;
+  color: white;
+  padding-top: 20px;
+  transition: width 0.3s;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.close-btn i {
+  color: gainsboro;
 }
 
 .sidebar .logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0;
 }
 
 .sidebar .logo .profile-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 10px;
-    margin-top: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+  margin-top: 30px;
 }
 
 .sidebar .logo .profile-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the right */
-    margin-top: 40px; /* Add space above the group */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  margin-top: 32px; 
 }
 
 .sidebar .logo .profile-text {
-    color: white;
-    font-size: 12px;
-    font-weight: bold; /* Make "Admin" bold */
+  color: white;
+  font-size: 16px;
+  font-weight: 600; 
 }
 
 .sidebar .logo .profile-email {
-    color: white;
-    font-size: 12px;
-    font-weight: 400;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: -1px;
 }
 
 .sidebar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-    transition: background 0.3s;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.icon-style {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
 .sidebar a:hover {
-    background: #add0ed9e;
-    color: white; /* Ensure text is visible */
-    border-radius: 12px; /* Add rounded corners */
-    margin: 5px 10px; /* Add space around the active item */
-    padding: 8px 15px; /* Adjust padding for consistent spacing */
-    transition: background 0.3s, margin 0.3s; /* Smooth transition */
+  background: #add0ed9e;
+  color: white; 
+  border-radius: 12px; 
+  margin: 3px 5px; 
+  padding: 8px 15px; 
+  transition: background 0.3s, margin 0.3s; 
 }
 
 .sidebar .active {
-    background: #0d395b98;
-    color: white; /* Ensure text is visible */
-    border-radius: 12px; /* Add rounded corners */
-    margin: 5px 10px; /* Add space around the active item */
-    padding: 8px 15px; /* Adjust padding for consistent spacing */
-    transition: background 0.3s, margin 0.3s; /* Smooth transition */
+  background: #0c395ce6;
+  color: white; 
+  border-radius: 12px; 
+  margin: 3px 5px; 
+  padding: 8px 15px; 
+  transition: background 0.3s, margin 0.3s; 
 }
 
 /* Logout Link Styles */
 .sidebar a.text-danger {
-    position: absolute;
-    bottom: 20px; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    color: #dc3545; /* Ensure the text is visible */
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #dc3545;
 }
 
 /* Toggle Button Styles */
 .toggle-checkbox {
-    display: none;
-}
-
-.content h2 {
-    font-family: 'Arial', sans-serif; /* Change to your desired font */
-    font-weight: 700; /* Set the font weight for the heading */
-    color: #333; /* Optional: Set a color for the heading */
-    margin-top: 20px;
-}
-
-.content p {
-    font-family: 'Arial', sans-serif; /* Change to your desired font */
-    font-weight: 400; /* Set the font weight for the paragraph */
-    color: #666; /* Optional: Set a color for the paragraph */
+  display: none;
 }
 
 .toggle-btn {
-    position: absolute;
-    top: 20px;
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    color: #748ca5;
-    transition-delay: 2s;
+  position: absolute;
+  top: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #748ca5;
+  transition-delay: 2s;
 }
 
 .close-btn {
-    left: 200px;
-    top: 3px;
-    color: #748ca5;
+  left: 200px;
+  top: 3px;
+  color: #748ca5;
 }
 
-.open-btn {
-    left: 4px;
-    top: 3px;
-    display: block;
-    background-color: #0d47a1; /* Apply the background color */
-    color: white; /* Ensure the icon or text is visible against the background */
-    border: none; /* Remove any default border */
-    padding: 5px; /* Add some padding for better appearance */
-    border-radius: 4px; /* Optional: Add rounded corners */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: left 0.3s, opacity 0.3s; /* Add transition for opacity */
-    opacity: 0; /* Start with the icon hidden */
-    transition-delay: 0.3s; /* Delay the appearance */
+.sidebar-toggle-container {
+  position: absolute; /* or fixed, depending on your layout */
+  left: -5px;
+  top: 30px;
+  background-color: #0d47a1; /* Dark blue background */
+  border-radius: 5px;
+  padding: 7px;
+  cursor: pointer;
+  display: inline-block; /* Ensures the container wraps around the content */
 }
+
+.sidebar-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-icon {
+    margin-left: 7px;
+    width: 16px; /* Adjust the size as needed */
+    height: 32px;
+    vertical-align: middle;
+}
+
+.logout-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #839fca61;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.logout-btn i {
+  margin-right: 8px;
+}
+
+.logout-btn:hover {
+  background-color: #0b3c91;
+}
+
 /* Content Styles */
 .content {
-    margin-left: 270px;
-    padding: 20px;
-    transition: margin-left 0.3s;
+  margin-left: 270px;
+  padding: 20px;
+  transition: margin-left 0.3s;
 }
 
-/* Toggle Sidebar */
+a i {
+    margin-right: 8px;
+}
+
+.info-box {
+    background-color: #ffffff;
+    /* White background for the box */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px;  /* Padding inside the box */
+    margin-top: 20px; /* Space above the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.container {
+    margin-top: 40px;
+}
+
+.custom-img-size {
+  width: 400px; /* Set the maximum width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+h3 {
+    text-align: center;
+}
+
+.container p.custom-heading{    
+    text-align: center;
+    margin-top:-30px;
+    font-size: 18px;
+    padding: 30px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+}
+
+.content p {
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.progress-button {
+    display: block;
+    margin-top: -20px;
+    padding: 10px 20px;
+    background-color: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 450;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+}
+
+.progress-button:hover {
+    background-color: #17305bf5;
+}
+
 .toggle-checkbox:checked ~ .sidebar {
     width: 0;
+    overflow: hidden;
+    padding: 0;
 }
 
 .toggle-checkbox:checked ~ .sidebar .close-btn {
-    display: none;
+  display: none;
 }
 
 .toggle-checkbox:checked ~ .open-btn {
-    display: block;
-    opacity: 1; /* Make the icon visible */
-    transition-delay: 0s; /* Remove delay when showing */
+  display: block;
+  opacity: 1;
+  transition-delay: 0s;
 }
 
 .toggle-checkbox:not(:checked) ~ .open-btn {
-    display: none;
-    opacity: 0; /* Keep the icon hidden */
+  display: none;
+  opacity: 0;
 }
 
 .toggle-checkbox:checked ~ .content {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 0;
-    }
-    .close-btn {
-        left: 0;
-    }
-    .content {
-        margin-left: 0;
-    }
+  .sidebar {
+    width: 0;
+  }
+  .close-btn {
+    left: 0;
+  }
+  .content {
+    margin-left: 0;
+  }
 }
